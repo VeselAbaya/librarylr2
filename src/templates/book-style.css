@@ -1,0 +1,22 @@
+.book-card__body {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.book-card__button--add {
+  width: 100px;
+}
+
+.book-card__info--right {
+  margin-left: auto;
+}
+
+.book-card__take-button, .book-card__handover-button {
+  width: auto;
+  height: auto;
+
+  margin: auto;
+  padding: 5px;
+
+  border-radius: 5px;
+}

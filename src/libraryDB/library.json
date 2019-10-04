@@ -1,0 +1,79 @@
+[
+  {
+    "id": "0",
+    "author": "Yan Chihold",
+    "releaseDate": "2003-08-23",
+    "name": "Books Review",
+    "details": {
+      "inStock": true,
+      "expiredDate": null,
+      "takenBy": null
+    }
+  },
+  {
+    "id": "1",
+    "author": "John R. R. Tolkien",
+    "releaseDate": "1979-03-23",
+    "name": "Lord of the Rings",
+    "details": {
+      "inStock": true,
+      "expiredDate": null,
+      "takenBy": null
+    }
+  },
+  {
+    "id": "2",
+    "author": "Eckhart Tolle",
+    "releaseDate": "1988-11-04",
+    "name": "The Power of Now",
+    "details": {
+      "inStock": false,
+      "expiredDate": "2019-11-11",
+      "takenBy": "juskovets@ittest-team.ru"
+    }
+  },
+  {
+    "id": "3",
+    "author": "Osho",
+    "releaseDate": "1994-08-14",
+    "name": "Life: A Song, A Dance",
+    "details": {
+      "inStock": false,
+      "expiredDate": "2019-10-05",
+      "takenBy": "vandervise465@gmail.com"
+    }
+  },
+  {
+    "id": "4",
+    "author": "Eckhart Tolle",
+    "releaseDate": "2010-04-21",
+    "name": "A New Earth",
+    "details": {
+      "inStock": true,
+      "expiredDate": null,
+      "takenBy": null
+    }
+  },
+  {
+    "id": "5",
+    "author": "Mikhail Bulgakov",
+    "releaseDate": "1949-02-28",
+    "name": "Heart of a Dog",
+    "details": {
+      "inStock": false,
+      "expiredDate": "2019-02-09",
+      "takenBy": "vandervise465@gmail.com"
+    }
+  },
+  {
+    "id": "6",
+    "author": "Mikhail Bulgakov",
+    "releaseDate": "1929-09-30",
+    "name": "Master and Margarita",
+    "details": {
+      "inStock": true,
+      "expiredDate": null,
+      "takenBy": null
+    }
+  }
+]

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Library</title>
+
+  <link rel="stylesheet" href="templates/style.css">
+</head>
+<body>
+
+<header class="header">
+  <nav class="nav">
+    <a href="#" class="nav__link">Library</a>
+    <div class="nav__auth">
+      <a href="#" class="nav__link">Sign In</a>
+      <a href="#" class="nav__link">Sign Out</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+  <ul class="filter-list">
+    <li class="filter-list__item">
+      <label class="filter-list__checkbox-label">
+        <input type="checkbox"> In Stock
+      </label>
+    </li>
+    <li class="filter-list__item">
+      <label class="filter-list__checkbox-label">
+        <input type="checkbox"> Expired
+      </label>
+    </li>
+  </ul>
+
+  <ul class="book-cards">
+    <li class="book-card">
+      <a href="#" class="book-card__body">
+        <p class="book-card__info book-card__info--left">
+          <span class="book-card__info-part">Title: Books Review</span>
+          <span class="book-card__info-part">Author: Yan Chihold</span>
+          <span class="book-card__info-part">Release Date: 08/23/2003</span>
+        </p>
+        <p class="book-card__info book-card__info--right">
+          <span class="book-card__info-part">In Stock</span>
+        </p>
+      </a>
+      <button class="book-card__button">Delete</button>
+    </li>
+    <li class="book-card">
+      <a href="#" class="book-card__body">
+        <p class="book-card__info book-card__info--left">
+          <span class="book-card__info-part">Title: <span>Lord of the Rings</span></span>
+          <span class="book-card__info-part">Author: <span>John R. R. Tolkien</span></span>
+          <span class="book-card__info-part">Release Date: <span>03/23/1979</span></span>
+        </p>
+        <p class="book-card__info book-card__info--right">
+          <span class="book-card__info-part">Not in Stock</span>
+          <span class="book-card__info-part">Expired Date: 03/20/2001</span>
+          <span class="book-card__info-part">
+            Taken by: <button class="book-card__user-info-button">{{username}}</button>
+          </span>
+        </p>
+      </a>
+      <button class="book-card__button">Delete</button>
+    </li>
+    <li class="book-card">
+      <div class="book-card__body">
+        <form class="book-card__info book-card__info--left" id="addForm">
+          <label class="book-card__info-part">Title: <input class="book-card__add-input" type="text"></label>
+          <label class="book-card__info-part">Author: <input class="book-card__add-input" type="text"></label>
+          <label class="book-card__info-part">Release Date: <input class="book-card__add-input" type="date"></label>
+        </form>
+        <input class="book-card__button book-card__button--add" type="submit" form="addForm">
+      </div>
+<!--      <button class="book-card__add-button">Add</button>-->
+    </li>
+  </ul>
+</main>
+
+</body>
+</html>

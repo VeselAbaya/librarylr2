@@ -1,0 +1,41 @@
+mixin filter-list(filterTypes)
+    ul.filter-list
+        li.filter-list__item
+            button.filter-reset Reset filters
+
+        li.filter-list__item
+            label.filter-list__checkbox-label
+                input.filter-list__input(
+                    type="radio"
+                    name="inStock"
+                    checked=(filterTypes.includes('inStock'))
+                    value="true")
+                | In Stock
+        li.filter-list__item
+            label.filter-list__checkbox-label
+                input.filter-list__input(
+                    type="radio"
+                    name="inStock"
+                    checked=(filterTypes.includes('not-inStock'))
+                    value="false")
+                | Not In Stock
+
+        li.filter-list__item
+            label.filter-list__checkbox-label
+                input.filter-list__input(
+                    type="radio"
+                    name="expired"
+                    checked=(filterTypes.includes('expired'))
+                    value="true")
+                | Expired
+        li.filter-list__item
+            label.filter-list__checkbox-label
+                input.filter-list__input(
+                    type="radio"
+                    name="expired"
+                    checked=(filterTypes.includes('not-expired'))
+                    value="false")
+                | Not Expired
+
+        li.filter-list__item
+            button.filter-button filter

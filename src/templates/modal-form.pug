@@ -1,0 +1,13 @@
+mixin modal-form(type)
+    .modal-overlay
+        .modal
+            if type === 'signIn'
+                form#signInForm.modal__form(action="/user/signin" method="POST")
+                    input.modal__form-input(type="email" name="email" placeholder="Email")
+                    input.modal__form-input(type="password" name="password" placeholder="Password")
+                    button.modal__form-submit Sign In
+            else if type === 'signUp'
+                form#signUpForm.modal__form(action="/user/signup" method="POST")
+                    input.modal__form-input(type="email" name="email" placeholder="Email")
+                    input.modal__form-input(type="password" name="password" placeholder="Password")
+                    button.modal__form-submit Sign Up

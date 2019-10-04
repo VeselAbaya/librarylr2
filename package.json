@@ -1,0 +1,24 @@
+{
+  "name": "lr-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "PORT=3033 node src/server.js",
+    "dev": "PORT=3033 nodemon src/server.js"
+  },
+  "author": "Antay Juskovets",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "lodash": "^4.17.15",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  }
+}

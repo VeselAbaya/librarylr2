@@ -1,0 +1,41 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='ie=edge')
+    title Library
+    link(rel='stylesheet' href='style.css')
+header.header
+    nav.nav
+        a.nav__link(href='/') Library
+        .nav__auth
+            a.nav__link(href='/user/logout') Logout
+main.container
+    include filter-list
+    +filter-list(filterTypes)
+    ul.book-cards
+        each book in library
+            li.book-card
+                a.book-card__body(href=`/book/${book.id}`)
+                    p.book-card__info.book-card__info--left
+                        span.book-card__info-part Title: #{book.name}
+                        span.book-card__info-part Author: #{book.author}
+                        span.book-card__info-part Release Date: #{book.releaseDate}
+                    p.book-card__info.book-card__info--right
+                        if book.details.inStock
+                            span.book-card__info-part In Stock
+                        else
+                            span.book-card__info-part Not in Stock
+                            span.book-card__info-part Expired Date: #{book.details.expiredDate}
+                            span.book-card__info-part
+                                | Taken by:
+                                button.book-card__user-info-button #{book.details.takenBy}
+                a.book-card__button(href=`/book/delete/${book.id}`) Delete
+
+        li.book-card
+            button.book-card__add-button Add
+
+.modal-overlay.modal-users-books
+    .modal
+
+script(src="./js/library.js")
