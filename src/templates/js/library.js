@@ -85,9 +85,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const radios = document.querySelectorAll('.filter-list__input');
   document.querySelector('.filter-button').onclick = function() {
     window.location.href = `http://localhost:3033/?${Array.from(radios)
-                                          .filter(radio => radio.checked)
-                                          .map(radio => `${radio.name}=${radio.value}`)
-                                          .join('&')}`
+                                                      .filter(radio => radio.checked)
+                                                      .map(radio => `${radio.name}=${radio.value}`)
+                                                      .join('&')}`
   };
 
   document.querySelector('.filter-reset').onclick = function() {

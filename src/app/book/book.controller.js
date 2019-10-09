@@ -46,7 +46,7 @@ class BookController {
   changeBook(req, res) {
     const book = req.book;
     merge(book, req.body);
-    res.render('book-card', {book: book});
+    res.render('book-card', {book: book, user: req.user});
   }
 
   find(req, res, next, id) {
@@ -63,7 +63,8 @@ class BookController {
   }
 
   createBook(req, res) {
-    if (!req.body.name || !req.body.author || !req.body.releaseDate) {
+    console.log(req.body);
+    if (!req.body.name || !req.body.author) {
       return res.status(400).send({
         status: 'error',
         message: 'Incorrect payload'
