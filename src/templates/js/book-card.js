@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     takeButton.onclick = () => {
       if (confirm('Do you really want to take this book?')) {
         const date = prompt('Please, write expired date in form mm/dd/yyyy');
-        if (Date.parse(date) < Date.now()) {
+        if (!isNaN(Date.parse(date)) && Date.parse(date) < Date.now()) {
           alert('Wrong date!');
         }
 

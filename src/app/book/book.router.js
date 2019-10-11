@@ -12,6 +12,6 @@ bookRouter
   .post('/:id', bookController.changeBook)
   .patch('/take/:id', (req, res, next) => {console.log(req.url); next()},bookController.take)
   .patch('/handover/:id', bookController.handOver)
-  .get('/delete/:id', bookController.deleteBook); // 'get' to delete it by href on client
+  .delete('/delete/:id', bookController.deleteBook); // 'get' to delete it by href on client
 
 module.exports = bookRouter;

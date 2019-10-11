@@ -93,4 +93,23 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('.filter-reset').onclick = function() {
     radios.forEach(radio => radio.checked = false)
   };
+
+  // delete button
+  const deleteButtons = document.querySelectorAll('.book-card__button');
+  deleteButtons && deleteButtons.forEach(button => {
+    button.onclick = () => {
+      if (confirm('Are you sure you want to delete the book?')) {
+        const request = new XMLHttpRequest();
+        request.open('DELETE', `/book/delete/${button.dataset['bookid']}`);
+
+        request.onreadystatechange = function() {
+          if (request.readyState === 4 && request.status === 200) {
+            location.reload();
+          }
+        };
+
+        request.send();
+      }
+    }
+  })
 });

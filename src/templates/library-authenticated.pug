@@ -30,7 +30,7 @@ main.container
                             span.book-card__info-part
                                 | Taken by:
                                 button.book-card__user-info-button #{book.details.takenBy}
-                a.book-card__button(href=`/book/delete/${book.id}`) Delete
+                button.book-card__button(data-bookId=book.id) Delete
 
         li.book-card
             button.book-card__add-button Add

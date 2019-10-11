@@ -4,8 +4,6 @@ const { merge } = require('lodash');
 
 class BookController {
   take(req, res) {
-    console.log(req.book);
-
     const book = req.book;
     if (!book.details.inStock) {
       return res.status(422).send({
@@ -40,7 +38,9 @@ class BookController {
   deleteBook(req, res) {
     const bookIndex = library.findIndex(book => book.id === req.book.id);
     library.splice(bookIndex, bookIndex + 1);
-    res.redirect('/');
+    res.send({
+      status: 'success'
+    });
   }
 
   changeBook(req, res) {
@@ -63,7 +63,6 @@ class BookController {
   }
 
   createBook(req, res) {
-    console.log(req.body);
     if (!req.body.name || !req.body.author) {
       return res.status(400).send({
         status: 'error',
@@ -73,6 +72,7 @@ class BookController {
 
     const newBook = {
       ...req.body,
+      id: (Math.max(...library.map(book => +book.id)) + 1).toString(),
       details: {
         inStock: true,
         expiredDate: null,
